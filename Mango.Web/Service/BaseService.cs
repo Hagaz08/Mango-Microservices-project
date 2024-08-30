@@ -59,7 +59,7 @@ namespace Mango.Web.Service
                     case HttpStatusCode.NotFound:
                         return new() { isSuccess = false, Message = "Not Found" };
                     case HttpStatusCode.Forbidden:
-                        return new() { isSuccess = false, Message = "Acces Denied" };
+                        return new() { isSuccess = false, Message = "Access Denied" };
                     case HttpStatusCode.Unauthorized:
                         return new() { isSuccess = false, Message = "Unauthorized" };
                     case HttpStatusCode.InternalServerError:
