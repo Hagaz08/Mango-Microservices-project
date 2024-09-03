@@ -49,7 +49,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                 if (!string.IsNullOrEmpty(cart.CartHeader.CouponCode))
                 {
                     CouponDto coupon = await _couponService.GetCoupon(cart.CartHeader.CouponCode);
-                    if(coupon != null && cart.CartHeader.CartTotal>coupon.DiscountAmount)
+                    if(coupon != null && cart.CartHeader.CartTotal > coupon.MinAmount)
                     {
                         cart.CartHeader.CartTotal -= coupon.DiscountAmount;
                         cart.CartHeader.Discount=coupon.DiscountAmount;
